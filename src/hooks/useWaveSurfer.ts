@@ -64,9 +64,11 @@ export function useWaveSurfer(containerRef: React.RefObject<HTMLDivElement>) {
     return () => { ws.destroy(); };
   }, []);
 
-  // Sync zoom
+  // Sync zoom — only call after audio is loaded (WaveSurfer throws otherwise)
   useEffect(() => {
-    wsRef.current?.zoom(zoom);
+    if (wsRef.current?.getDuration()) {
+      wsRef.current.zoom(zoom);
+    }
   }, [zoom]);
 
   return { wsRef, regionsRef };
