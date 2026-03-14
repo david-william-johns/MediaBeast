@@ -1,0 +1,49 @@
+# Tauri build output
+src-tauri/target/
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Vite cache
+.vite/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Bundled sidecars (large binaries - not tracked in git)
+binaries/*.exe
+
+# User data & media (not tracked in git)
+Output/
+data/
+
+# Waveform cache
+waveform_cache/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Rust
+Cargo.lock
+**/*.rs.bk
+
+# TypeScript
+*.tsbuildinfo
+
+# Claude local settings
+.claude/
